@@ -57,6 +57,7 @@
       "version": "^2.0.0"
     }
   ],
+  "repository_id": "my-detection-rules",
   "required_fields": [
     {
       "ecs": true,
