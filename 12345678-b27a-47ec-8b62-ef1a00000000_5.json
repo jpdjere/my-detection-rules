@@ -1,5 +1,5 @@
 {
-  "rule_id": "12345678-b27a-47ec-8b62-ef1a00000000",
+  "rule_id": "my-detection-rules_12345678-b27a-47ec-8b62-ef1a00000000",
   "name": "My Test Rule",
   "type": "query",
   "language": "kuery",
