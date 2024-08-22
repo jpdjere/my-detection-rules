@@ -50,6 +50,7 @@
     "https://developer.okta.com/docs/reference/api/event-types/",
     "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
   ],
+  "repository_id": "my-detection-rules",
   "setup": "The Okta Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
   "related_integrations": [
     {
