@@ -1,6 +1,6 @@
 {
   "rule_id": "12345678-b27a-47ec-8b62-ef1a00000000",
-  "name": "My Test Rule 6",
+  "name": "M.y Test Rule 6",
   "type": "query",
   "language": "kuery",
   "risk_score": 21,
