@@ -69,6 +69,7 @@
       "type": "keyword"
     }
   ],
+  "repository_id": "my-detection-rules",
   "index": [
     "filebeat-*",
     "logs-okta*"
