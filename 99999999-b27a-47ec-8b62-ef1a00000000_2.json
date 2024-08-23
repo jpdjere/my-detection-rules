@@ -1,0 +1,76 @@
+{
+  "name": "Edited Second Rule",
+  "description": "Detects attempts to modify a rule within an Okta policy. An adversary may attempt to modify an Okta policy rule in order to weaken an organization's security controls.",
+  "risk_score": 21,
+  "severity": "low",
+  "license": "",
+  "version": 2,
+  "tags": [
+    "Domain: Cloud",
+    "Data Source: Okta",
+    "Use Case: Identity and Access Audit",
+    "Tactic: Defense Evasion"
+  ],
+  "enabled": false,
+  "risk_score_mapping": [],
+  "severity_mapping": [],
+  "interval": "5m",
+  "from": "now-360s",
+  "to": "now",
+  "exceptions_list": [],
+  "author": [
+    "Elastic"
+  ],
+  "false_positives": [
+    "Consider adding exceptions to this rule to filter false positives if Okta MFA rules are regularly modified in your organization."
+  ],
+  "references": [
+    "https://help.okta.com/en/prod/Content/Topics/Security/Security_Policies.htm",
+    "https://developer.okta.com/docs/reference/api/system-log/",
+    "https://developer.okta.com/docs/reference/api/event-types/",
+    "https://www.elastic.co/security-labs/testing-okta-visibility-and-detection-dorothy"
+  ],
+  "max_signals": 100,
+  "threat": [
+    {
+      "framework": "MITRE ATT&CK",
+      "tactic": {
+        "id": "TA0005",
+        "name": "Defense Evasion",
+        "reference": "https://attack.mitre.org/tactics/TA0005/"
+      },
+      "technique": [
+        {
+          "id": "T1562",
+          "name": "Impair Defenses",
+          "reference": "https://attack.mitre.org/techniques/T1562/",
+          "subtechnique": [
+            {
+              "id": "T1562.007",
+              "name": "Disable or Modify Cloud Firewall",
+              "reference": "https://attack.mitre.org/techniques/T1562/007/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setup": "The Okta Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.",
+  "related_integrations": [
+    {
+      "package": "okta",
+      "version": "^2.0.0"
+    }
+  ],
+  "required_fields": [],
+  "type": "query",
+  "index": [
+    "filebeat-*",
+    "logs-okta*"
+  ],
+  "filters": [],
+  "query": "event.dataset:okta.system and event.action:policy.rule.update",
+  "language": "kuery",
+  "rule_id": "my-detection-rules_99999999-b27a-47ec-8b62-ef1a00000000",
+  "repository_id": "my-detection-rules"
+}
