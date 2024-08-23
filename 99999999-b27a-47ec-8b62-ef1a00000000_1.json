@@ -69,6 +69,6 @@
   ],
   "query": "event.dataset:okta.system and event.action:policy.rule.update",
   "language": "kuery",
-  "rule_id": "my-detection-rules_99999999-b27a-47ec-8b62-ef1a00000000",
+  "rule_id": "99999999-b27a-47ec-8b62-ef1a00000000",
   "repository_id": "my-detection-rules"
 }
